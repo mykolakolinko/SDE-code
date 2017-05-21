@@ -1,4 +1,4 @@
-function [] = euler()
+function [Mean, Median, Std] = euler()
   load("par.mat")
   for j = 1:n_iter
     #wiener process
@@ -15,9 +15,9 @@ function [] = euler()
   end
   
   #values for table
-  Mean = mean(normvec)
-  Median = median(normvec)
-  Std = std(normvec)
+  Mean = mean(normvec);
+  Median = median(normvec);
+  Std = std(normvec);
   
   MX = mean(allX);
   figure(2); plot(t,MX,"-x",t,mx,"-o");
