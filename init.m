@@ -2,7 +2,7 @@ function [] = init()
   #T - right endpoint, t - uniform partition of [0, T] with N points and diametr of partition dt
   T=1; N=101; dt=T/(N-1); t=0:dt:T;
   #number of iterations
-  n_iter = 30;
+  n_iter = 1000;
   
   #coefficients
   x0 = 2;
