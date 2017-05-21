@@ -16,7 +16,7 @@ function [] = init()
   elseif (b==0 & c==0)
     x = @(w)(exp(a*t).*(cumsum(exp(-a*t).*[x0,diff(w)])));
   else 
-    #general solution: x(1) = x0 for m = 2:N x(m) = @(w)(exp((a-c^2/2)*t(m)+c*w(m))*(x0 + (b-c*d)*sum(exp(-(a-c^2/2)*t(1:m)-c*w(1:m))*dt) + d*sum(exp(-(a-c^2/2)*t(1:m)-c*w(1:m)).*diff(w)))); end
+    x = @(w)(exp(a*t).*(x0 + cumsum((b-c*d)*exp(-(a-c^2/2)*t-c*w).*dt) + cumsum(d*exp(-(a-c^2/2)*t-c*w).*[0,diff(w)])))
   endif
   
   #mean solution
