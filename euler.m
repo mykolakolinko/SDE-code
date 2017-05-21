@@ -9,9 +9,16 @@ function [] = euler()
     for n=2:N X(n) = X(n-1) + (a*X(n-1) + b).*dt + (c*X(n-1) + d).*dW(n-1); end;
     #figure(1); plot(t,X,"-x",t,x(W),"-o");
     
+    normvec(j) = max(X-x(t));
     allX(j,:) = X;
     clear dW W X EXP;
   end
+  
+  #values for table
+  mean = mean(normvec)
+  median = median(normvec)
+  std = std(normvec)
+  
   MX = mean(allX);
   figure(2); plot(t,MX,"-x",t,mx,"-o");
 end
