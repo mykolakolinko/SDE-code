@@ -1,8 +1,9 @@
-function [Mean, Median, Std] = euler()
+function MMS = euler()
   load("par.mat")
   for j = 1:n_iter
     #wiener process
-    dW = sqrt(dt).*randn(1,N-1); W = [0, cumsum(dW)];
+    dW = sqrt(dt).*randn(1,N-1); 
+    W = [0, cumsum(dW)];
     
     #euler method
     X(1) = x0;
@@ -18,6 +19,7 @@ function [Mean, Median, Std] = euler()
   Mean = mean(normvec);
   Median = median(normvec);
   Std = std(normvec);
+  MMS = [Mean, Median, Std];
   
   MX = mean(allX);
   figure(2); plot(t,MX,"-x",t,mx,"-o");
