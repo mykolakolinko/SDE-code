@@ -27,4 +27,4 @@ function [] = init()
   endif
   
 	save par.mat
-end;
+end
