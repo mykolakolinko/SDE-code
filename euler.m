@@ -15,9 +15,9 @@ function [] = euler()
   end
   
   #values for table
-  mean = mean(normvec)
-  median = median(normvec)
-  std = std(normvec)
+  Mean = mean(normvec)
+  Median = median(normvec)
+  Std = std(normvec)
   
   MX = mean(allX);
   figure(2); plot(t,MX,"-x",t,mx,"-o");
