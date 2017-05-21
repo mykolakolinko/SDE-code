@@ -13,5 +13,5 @@ function [] = euler()
     clear dW W X EXP;
   end
   MX = mean(allX);
-  figure(1); plot(t,MX,"-x",t,mx,"-o");
+  figure(2); plot(t,MX,"-x",t,mx,"-o");
 end
