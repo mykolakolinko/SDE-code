@@ -1,0 +1,56 @@
+# Created by Octave 4.2.1, Sat May 20 22:39:29 2017 GMT <unknown@unknown>
+# name: N
+# type: scalar
+101
+
+
+# name: T
+# type: scalar
+1
+
+
+# name: a
+# type: function handle
+@<anonymous>
+@(t) (0 * t - 1)
+
+
+# name: b
+# type: function handle
+@<anonymous>
+@(t) (0 * t)
+
+
+# name: c
+# type: function handle
+@<anonymous>
+@(t) (0 * t - 1.3)
+
+
+# name: d
+# type: function handle
+@<anonymous>
+@(t) (0 * t)
+
+
+# name: dt
+# type: scalar
+0.01
+
+
+# name: n_iter
+# type: scalar
+250
+
+
+# name: t
+# type: range
+# base, limit, increment
+0 1 0.01
+
+
+# name: x0
+# type: scalar
+2
+
+
