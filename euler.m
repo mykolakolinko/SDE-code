@@ -10,7 +10,7 @@ function MMS = euler()
     for n=2:N X(n) = X(n-1) + (a*X(n-1) + b).*dt + (c*X(n-1) + d).*dW(n-1); end;
     #figure(1); plot(t,X,"-x",t,x(W),"-o");
     
-    normvec(j) = max(abs(X-x(t)));
+    normvec(j) = max(abs(X-x(W)));
     allX(j,:) = X;
     clear dW W X EXP;
   end
